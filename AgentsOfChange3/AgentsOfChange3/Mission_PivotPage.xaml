@@ -1,0 +1,64 @@
+﻿<phone:PhoneApplicationPage x:Name="MissionPivotPage"
+    x:Class="AgentsOfChange3.Mission_PivotPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <phone:Pivot Title="Today's Mission" FontFamily="Segoe WP">
+            <phone:Pivot.Background>
+                <ImageBrush ImageSource="/AgentsOfChange3;component/Assets/Pics/wallpaper_01.jpg" Stretch="UniformToFill"/>
+            </phone:Pivot.Background>
+
+            <!--Pivot item one-->
+            <phone:PivotItem Header="briefing">
+
+                <ScrollViewer>
+                    <StackPanel x:Name="info" >
+                        <!--Info-->
+                        <TextBlock Text="info" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                        <TextBlock Text="Mining in the philippines is caused mostly by corrupt officials?" TextWrapping="Wrap" Margin="15,0,0,0" />
+
+                        <!--Your Mission-->
+                        <TextBlock Text="mission" Margin="15,5,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                        <TextBlock x:Name="textblock_yourMission" Text="Your mission agent NICKNAME, should you choose to accept it, tapos dyan na mag a-add yung text ni cj." TextWrapping="Wrap" Margin="15,0,0,0" />
+
+                        <!--Difficulty-->
+                        <TextBlock Text="difficulty" Margin="15,5,0,0" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                        <!--<toolkit:Rating Width="250" Height="50" HorizontalAlignment="Left" x:Name="RatingControl" RatingItemCount="5" Margin="15,0,0,0" Value="3.5" BorderThickness="0" Background="{x:Null}" />-->
+
+                        <!--Requirements-->
+                        <TextBlock Margin="15,5,0,0" Text="requirements" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                        <TextBlock Margin="15,0,0,0" Text="Bike"/>
+
+                        <!--Points-->
+                        <TextBlock Margin="15,5,0,0" Text="rewards" Style="{StaticResource PhoneTextExtraLargeStyle}" />
+                        <TextBlock Margin="15,0,0,0" Text="5 pts. | 50% off discount from Chattime"/>
+
+                        <Button x:Name="button_Accept" Margin="0,15,0,0" Content="Accept" Height="Auto" Background="{x:Null}" />
+                    </StackPanel>
+                </ScrollViewer>
+
+            </phone:PivotItem>
+
+            <!--Pivot item two-->
+            <phone:PivotItem Header="comments">
+                <Grid/>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>
